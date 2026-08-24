@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Центр пренатальной диагностики Е.Н. Андреевой — диагностика за один визит</title>
-<meta name="description" content="Экспертное УЗИ по протоколам FMF, генетика на базе лаборатории «Геномед», инвазивная диагностика и консультация — за один визит. Приём 7 дней в неделю, включая выходные.">
+<meta name="description" content="Нейросонография плода и экспертная Эхо-КГ плода, УЗИ по протоколам FMF, генетика на базе лаборатории «Геномед», инвазивная диагностика — за один визит. Приём 7 дней в неделю, включая выходные.">
 <link rel="icon" href="mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -203,6 +203,20 @@ h3{font-size:19px;font-weight:700;line-height:1.32;letter-spacing:-.015em}
   background:var(--bg-a);border-radius:7px;padding:5px 10px;
 }
 
+/* ---------- Редкие исследования: нейросонография и Эхо-КГ плода ---------- */
+.card-when{margin-top:10px;font-size:14px;color:var(--navy-75);line-height:1.55}
+.card-when b{color:var(--navy);font-weight:700}
+.rare-foot{margin-top:22px;display:grid;grid-template-columns:.78fr 1.22fr;gap:20px;align-items:stretch}
+.rare-price{background:var(--teal);border-radius:16px;padding:26px;color:#fff;display:flex;flex-direction:column;justify-content:center}
+.rare-price-h{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.82)}
+.prices{display:flex;gap:26px;flex-wrap:wrap;margin-top:16px}
+.price b{display:block;font-family:var(--display);font-size:30px;font-weight:800;line-height:1}
+.price span{display:block;font-size:13.5px;color:rgba(255,255,255,.88);margin-top:6px;line-height:1.35}
+.rare-note{background:var(--bg-b);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.rare-note p{font-size:15px;color:var(--navy-75);line-height:1.6}
+.rare-note strong{color:var(--navy)}
+@media (max-width:1000px){.rare-foot{grid-template-columns:1fr}}
+
 /* ---------- Тревожный результат ---------- */
 .alarm-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .alarm p + p{margin-top:16px}
@@ -226,8 +240,8 @@ h3{font-size:19px;font-weight:700;line-height:1.32;letter-spacing:-.015em}
 .doc li{display:flex;gap:12px;font-size:15.5px;color:var(--navy-75);line-height:1.55}
 .doc li + li{margin-top:13px}
 .doc li svg{flex:0 0 auto;margin-top:4px;color:var(--teal)}
-.facts{display:flex;gap:16px;margin-top:28px;flex-wrap:wrap}
-.fact{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;flex:1 1 150px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
+.fact{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px}
 .fact b{display:block;font-family:var(--display);font-size:28px;font-weight:800;color:var(--teal-deep);line-height:1}
 .fact span{font-size:13px;color:var(--navy-55);display:block;margin-top:5px;line-height:1.35}
 
@@ -301,6 +315,7 @@ h3{font-size:19px;font-weight:700;line-height:1.32;letter-spacing:-.015em}
   .chips,.steps-grid,.cards{grid-template-columns:1fr}
   .hero-cta .btn{flex:1 1 100%}
   .card{flex-direction:column;gap:14px}
+  .facts{grid-template-columns:1fr}
   .day .dow{font-size:10px;letter-spacing:.02em}
   .day{padding:9px 2px 8px}
   .steps-foot{padding:22px}
@@ -372,6 +387,14 @@ h3{font-size:19px;font-weight:700;line-height:1.32;letter-spacing:-.015em}
         <div class="chip">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
           Забор материала — в день визита, без пересылки
+        </div>
+        <div class="chip">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg>
+          Нейросонография плода — редкая самостоятельная услуга
+        </div>
+        <div class="chip">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
+          Экспертная Эхо-КГ плода — сердце по расширенному протоколу
         </div>
       </div>
     </div>
@@ -471,8 +494,58 @@ h3{font-size:19px;font-weight:700;line-height:1.32;letter-spacing:-.015em}
   </div>
 </section>
 
+<!-- ============ РЕДКИЕ ИССЛЕДОВАНИЯ (отдельная точка входа: реклама, SEO) ============ -->
+<section class="section sec-white" id="neuro">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Редкие экспертные исследования</p>
+      <h2>Нейросонография плода и экспертная Эхо-КГ плода</h2>
+      <p class="lead" style="margin-top:16px">
+        Специализированные исследования, которые выполняются далеко не в каждой клинике.
+        В нашем центре их можно пройти <strong>напрямую, у специалистов по пренатальной диагностике</strong> —
+        без поиска подходящего экспертного центра и сложной маршрутизации.
+      </p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg></div>
+        <div>
+          <h3>Нейросонография плода</h3>
+          <p>Прицельное исследование головного мозга плода по расширенному протоколу: структуры ЦНС в нескольких плоскостях, желудочковая система, мозолистое тело, мозжечок и задняя черепная ямка.</p>
+          <p class="card-when"><b>Когда назначают:</b> расширение желудочков или другая находка на скрининге, подозрение на аномалию ЦНС, перенесённая инфекция, отягощённый анамнез.</p>
+          <span class="term">Как самостоятельная услуга в Москве и области встречается редко</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg></div>
+        <div>
+          <h3>Экспертная Эхо-КГ плода</h3>
+          <p>Детальное исследование сердца плода: последовательный сегментарный анализ, камеры и клапаны, магистральные сосуды, оценка ритма и допплерометрия кровотоков.</p>
+          <p class="card-when"><b>Когда назначают:</b> подозрение на порок сердца, нарушения ритма, пороки сердца в семье, сахарный диабет или приём препаратов у мамы, многоплодная беременность.</p>
+          <span class="term">Заключение — с планом дальнейшего наблюдения и маршрута родоразрешения</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rare-foot">
+      <div class="rare-price">
+        <p class="rare-price-h">Стоимость каждого исследования</p>
+        <div class="prices">
+          <div class="price"><b>5 500 ₽</b><span>у врача-эксперта</span></div>
+          <div class="price"><b>7 000 ₽</b><span>у Е.Н. Андреевой</span></div>
+        </div>
+      </div>
+      <div class="rare-note">
+        <p><strong>О бесплатном маршруте — честно.</strong> Отдельные государственные маршруты для этих исследований сохраняются. Но чтобы пройти их бесплатно, нужны показания, направление и правильная маршрутизация — быстро и очевидно это получается не всегда. У нас можно записаться напрямую: без направления, без поиска нужного учреждения, в том числе в выходные.</p>
+        <a class="btn btn-coral" href="#zapis" data-goal="neuro">Записаться на исследование</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ ТРЕВОЖНЫЙ РЕЗУЛЬТАТ ============ -->
-<section class="section sec-white alarm">
+<section class="section sec-grad alarm">
   <div class="wrap alarm-grid">
     <div>
       <p class="eyebrow">Второе мнение · сложные случаи</p>
@@ -513,11 +586,14 @@ h3{font-size:19px;font-weight:700;line-height:1.32;letter-spacing:-.015em}
         <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Заведующая медико-генетическим отделением МОНИИАГ им. академика В.И. Краснопольского</li>
         <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Доцент курса «Пренатальная диагностика» РМАНПО Минздрава России</li>
         <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Исполнительный директор Ассоциации специалистов медицины плода (АСМП)</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Аккредитованный экзаменатор FMF: входит в группу экзаменаторов Ассоциации специалистов медицины плода. Первая сертификация FMF — 2009 год</li>
         <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Выполняет все виды инвазивной пренатальной диагностики: аспирацию ворсин хориона, амниоцентез, кордоцентез</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Повышение квалификации по программе «Инвазивная пренатальная диагностика врождённых и наследственных заболеваний» (РМАПО Минздрава России, 2014)</li>
       </ul>
       <div class="facts">
-        <div class="fact"><b>18+</b><span>лет практики</span></div>
+        <div class="fact"><b>23</b><span>года в пренатальной диагностике</span></div>
         <div class="fact"><b>3500+</b><span>инвазивных процедур</span></div>
+        <div class="fact"><b>FMF</b><span>аккредитованный экзаменатор, сертификация с 2009</span></div>
         <div class="fact"><b>2010</b><span>внедрила инвазивную диагностику в МОНИИАГ</span></div>
       </div>
     </div>
@@ -569,6 +645,8 @@ h3{font-size:19px;font-weight:700;line-height:1.32;letter-spacing:-.015em}
           <option value="priem">Записаться на приём</option>
           <option value="second">Второе мнение / тревожный результат</option>
           <option value="uzi">Экспертное УЗИ и скрининг</option>
+          <option value="neuro">Нейросонография плода</option>
+          <option value="echo">Экспертная Эхо-КГ плода</option>
           <option value="genetics">НИПТ / ХМА / генетика</option>
           <option value="invasive">Инвазивная диагностика</option>
           <option value="doctor">Направить пациентку (врач или клиника)</option>
@@ -601,6 +679,7 @@ h3{font-size:19px;font-weight:700;line-height:1.32;letter-spacing:-.015em}
         </span>
       </div>
       <div class="footer-links">
+        <a href="#neuro">Нейросонография и Эхо-КГ плода</a>
         <a href="full.html">Подробная версия сайта</a>
         <a href="tel:+78000000000">8 800 000-00-00</a>
         <a href="#zapis">Записаться</a>
@@ -608,7 +687,7 @@ h3{font-size:19px;font-weight:700;line-height:1.32;letter-spacing:-.015em}
     </div>
     <p class="disclaimer">
       Информация на сайте не является публичной офертой. Имеются противопоказания, необходима консультация специалиста.
-      Приведённые сроки готовности исследований ориентировочны и зависят от вида исследования.
+      Приведённые сроки готовности исследований и стоимость указаны справочно и уточняются при записи.
       <!-- Данные о Е.Н. Андреевой приведены по открытым источникам и требуют финальной сверки перед публикацией. -->
     </p>
   </div>
