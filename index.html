@@ -207,11 +207,13 @@ h3{font-size:19px;font-weight:700;line-height:1.32;letter-spacing:-.015em}
 .card-when{margin-top:10px;font-size:14px;color:var(--navy-75);line-height:1.55}
 .card-when b{color:var(--navy);font-weight:700}
 .rare-foot{margin-top:22px;display:grid;grid-template-columns:.78fr 1.22fr;gap:20px;align-items:stretch}
-.rare-price{background:var(--teal);border-radius:16px;padding:26px;color:#fff;display:flex;flex-direction:column;justify-content:center}
-.rare-price-h{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.82)}
-.prices{display:flex;gap:26px;flex-wrap:wrap;margin-top:16px}
-.price b{display:block;font-family:var(--display);font-size:30px;font-weight:800;line-height:1}
-.price span{display:block;font-size:13.5px;color:rgba(255,255,255,.88);margin-top:6px;line-height:1.35}
+.rare-price{background:var(--teal);border-radius:16px;padding:26px 28px;color:#fff;display:flex;flex-direction:column;justify-content:center}
+.rare-price-h{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:4px}
+.price-row{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:15px 0}
+.price-row + .price-row{border-top:1px solid rgba(255,255,255,.28)}
+.price-row span{font-size:15px;color:rgba(255,255,255,.92);line-height:1.35}
+.price-row b{font-family:var(--display);font-size:27px;font-weight:800;line-height:1;white-space:nowrap}
+.rare-price-note{margin-top:14px;font-size:12.5px;line-height:1.5;color:rgba(255,255,255,.8)}
 .rare-note{background:var(--bg-b);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
 .rare-note p{font-size:15px;color:var(--navy-75);line-height:1.6}
 .rare-note strong{color:var(--navy)}
@@ -530,11 +532,10 @@ h3{font-size:19px;font-weight:700;line-height:1.32;letter-spacing:-.015em}
 
     <div class="rare-foot">
       <div class="rare-price">
-        <p class="rare-price-h">Стоимость каждого исследования</p>
-        <div class="prices">
-          <div class="price"><b>5 500 ₽</b><span>у врача-эксперта</span></div>
-          <div class="price"><b>7 000 ₽</b><span>у Е.Н. Андреевой</span></div>
-        </div>
+        <p class="rare-price-h">Стоимость</p>
+        <div class="price-row"><span>У врача-эксперта</span><b>5 500 ₽</b></div>
+        <div class="price-row"><span>У Е.Н. Андреевой</span><b>7 000 ₽</b></div>
+        <p class="rare-price-note">Цена за одно исследование — нейросонографию или Эхо-КГ плода</p>
       </div>
       <div class="rare-note">
         <p><strong>О бесплатном маршруте — честно.</strong> Отдельные государственные маршруты для этих исследований сохраняются. Но чтобы пройти их бесплатно, нужны показания, направление и правильная маршрутизация — быстро и очевидно это получается не всегда. У нас можно записаться напрямую: без направления, без поиска нужного учреждения, в том числе в выходные.</p>
